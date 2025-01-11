@@ -313,6 +313,19 @@ footer {
 }
 
 @media (max-width: 768px) {
+     main {
+      padding: 2em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        margin-top: 30px;
+       place-items: center;
+    }
     header {
         flex-direction: column;
     }

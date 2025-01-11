@@ -11,7 +11,7 @@
         <h1>21st Century Group 4</h1>
         <nav>
             <a href="#tech">Members</a>
-            <a href="#culture">About</a>
+            <a href="#culture">Task</a>
             <a href="#space">Group Activity</a>
             <a href="#contact">Contact</a>
         </nav>
@@ -23,9 +23,9 @@
                 <h2>What is 21st Century?</h2>
                 <p> ︎ ︎ ︎The 21st Century is the current century in the Anno Domini or Common Era, in accordance with the Gregorian calendar. It began on 1 January 2001 and will end on 31 December 2100. It is the first century of the 3rd millennium..</p>
                 <p>(Read More on Wiki)</p>
-		    <button>
-				<a href="https://en.wikipedia.org/wiki/21st_century" class="button" style="color: white;">Read More</a>
-		    </button>
+				<button>
+				<a href="https://en.wikipedia.org/wiki/21st_century" class="button">Read More</a>
+				</button>
             </div>
             <div class="intro-image">
                 <img src="images/21stcenturyLogo.jpg" alt="21st Century Logo">
@@ -34,7 +34,6 @@
 
         <section id="tech">
             <h2>Members</h2>
-		<center>
             <div class="feature-grid">
                 <figure class="feature-card">
                    <img src="images/leiam.jpg" alt="Leiam Scaran.jpg">
@@ -100,8 +99,50 @@
 						 <p>17 yrs. old</p>
 				   </figcaption>
                 </figure>
+
             </div>
-		</center>
+        </section>
+
+        <section id="culture">
+     <h2>Task</h2>
+     <div class="culture-content">
+         <div class="culture-text">
+             <p>The Group has been tasked to create a Text-Talk Novel - Flash Fiction or One Shot (2 Characters)</p>
+         </div>
+         <div class="culture-video">
+           <h3>Examples</h3>
+           <div class="video-container">
+                 <iframe width="560" height="315" src="https://www.youtube.com/embed/OaLMIHe6aJg?si=UIKpSAY9zS6yMxoI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+             </div>
+             <p class="video-source">Source: Hanirah Ampuan on Youtube <span class="Hanirah Ampuan on Youtube"></span></p>
+        </div>
+     </div>
+ </section>
+
+        <section id="space">
+            <h2>Group Activity</h2>
+            <div class="space-content">
+              <div class="space-image">
+                  <img src="images/space_exploration.jpg" alt="Space Exploration">
+                </div>
+                <div class="space-text">
+                    <p>Private companies are now leading missions to the Moon, Mars, and beyond, marking a new era of space discovery.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
         </section>
 
     </main>
@@ -111,5 +152,50 @@
     </footer>
 
   <script src="script.js"></script>
+  <script>
+      // 2. This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '390',
+          width: '640',
+          videoId: 'YMcir4n0_ws',
+          playerVars: {
+            'playsinline': 1
+          },
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+      }
+
+      // 4. The API will call this function when the video player is ready.
+      function onPlayerReady(event) {
+       // event.target.playVideo(); <- removed autoplay
+      }
+
+      // 5. The API calls this function when the player's state changes.
+      //    The function indicates that when playing a video (state=1),
+      //    the player should play for six seconds and then stop.
+      var done = false;
+      function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING && !done) {
+           // setTimeout(stopVideo, 6000); <- Removed the timer and stop
+          done = true;
+        }
+      }
+      function stopVideo() {
+        player.stopVideo();
+      }
+    </script>
 </body>
 </html>

@@ -2,9 +2,21 @@ body {
     font-family: sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #0a0a0a;
     color: #fff;
     overflow-x: hidden;
+    background-size: 400% 400%; /* Keep the gradient animation */
+    background-image: linear-gradient(
+        45deg,
+        #003366,
+        #006699,
+        #008080,
+        #004D40,
+        #006600,
+        #008000
+    );
+    animation: gradient-move 10s linear infinite, gradient-color 10s ease infinite;
+   /* Needed so that the background colors are visible and blended properly*/
+   background-color: #003366; /* Fallback color (initial color) */
 }
 
 header {
@@ -15,6 +27,24 @@ header {
     justify-content: space-around;
     align-items: center;
 }
+
+ /*Logo in Header*/
+
+    header a.logo-container{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+         color: #fff; /*set text color to white*/
+         gap: 10px;
+    }
+    header a.logo-container img.logo{
+       height: 50px; /*Adjust this as needed*/
+        width: auto;
+    }
+     header a.logo-container h1.logo-text{
+         margin: 0;
+         font-size: 2em;
+    }
 
 header h1 {
     margin: 0;
@@ -310,6 +340,28 @@ footer {
 @keyframes wiggle-gradient {
     0% { background-position: 0% 0%; }
     100% { background-position: 100% 0%; }
+}
+
+@keyframes gradient-move {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes gradient-color {
+    0% { background-color: #003366; } /* Dark Blue */
+    16.66% { background-color: #006699; } /* Medium Blue */
+    33.33% { background-color: #008080; } /* Teal */
+    50% { background-color: #004D40; } /* Dark Green */
+     66.66% { background-color: #006600; } /* Medium Green */
+    83.33% { background-color: #008000; } /* Slightly Lighter Green */
+    100% { background-color: #003366; } /* Dark Blue */
 }
 
 @media (max-width: 768px) {

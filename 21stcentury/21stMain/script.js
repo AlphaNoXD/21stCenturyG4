@@ -7,3 +7,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+
+document.querySelector('header nav a[href="#tech"]').addEventListener('click', function(e) {
+    e.preventDefault();
+    alert('Click on Profiles to view Individual Activities!');
+});

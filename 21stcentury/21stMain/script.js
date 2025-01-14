@@ -1,3 +1,9 @@
+document.addEventListener('DOMContentLoaded', function() {
+
+  document.body.classList.add('desktop-mode');
+ });
+
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();

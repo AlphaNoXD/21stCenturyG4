@@ -92,6 +92,12 @@ section h2{
     background-size: 200% 100%;
     background-image: linear-gradient(90deg, rgba(255, 0, 0, 1) 0%, rgba(255, 100, 100, 1) 50%, rgba(255, 0, 0, 1) 100%);
     animation: wiggle-gradient 5s linear infinite;
+	  text-decoration: none;
+      padding: 1em;
+      color: #fff;
+    }
+.profile-link {
+      display: block; /*Make the link behave like a div*/
 }
 
 .figcaption-earl {
@@ -106,7 +112,14 @@ section h2{
      background-size: 200% 100%;
     background-image: linear-gradient(90deg, rgba(0, 0, 255, 1) 0%, rgba(100, 100, 255, 1) 50%, rgba(0, 0, 255, 1) 100%);
      animation: wiggle-gradient 5s linear infinite;
+	  text-decoration: none;
+      padding: 1em;
+      color: #fff;
+    }
+.profile-link {
+      display: block; /*Make the link behave like a div*/
 }
+   
 .figcaption-tinang {
     background-color: rgba(255, 192, 203, 1);
    background-size: 200% 100%;

@@ -1,9 +1,9 @@
 body {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    overflow-x: hidden;
-}
+     margin: 0;
+     padding: 0;
+     font-family: sans-serif;
+     overflow-x: hidden;
+ }
 
  main {
      display: flex;
@@ -13,18 +13,18 @@ body {
      min-height: 100vh;
       background-size: 400% 400%;
     background-image: linear-gradient(
-      45deg,
-    #800000,
-     #8B0000,
-      #A52A2A,
-       #B22222,
-        #CD5C5C,
-        #DC143C,
-       #E9967A,
-        #F08080,
-         #FA8072,
-          #FFA07A
-     );
+         45deg,
+     #006400,
+         #008000,
+         #228B22,
+         #32CD32,
+         #3CB371,
+         #2E8B57,
+         #325920,
+          #307160,
+          #2B9147,
+           #1F8E60
+         );
       animation: gradient-move 15s linear infinite, gradient-color 10s ease infinite;
      backdrop-filter: blur(5px); /* Apply the blur effect */
      color: white;
@@ -45,17 +45,17 @@ body {
    }
  }
  @keyframes gradient-color {
-     0% { background-color:  #800000; }
-    10% { background-color: #8B0000; }
-    20% { background-color: #A52A2A; }
-    30% { background-color:  #B22222; }
-   40%{ background-color: #CD5C5C; }
-  50% { background-color: #DC143C;}
-   60%{background-color: #E9967A; }
-  70%{ background-color:  #F08080;}
-    80%{ background-color: #FA8072; }
-    90%{ background-color: #FFA07A;}
-   100% { background-color:  #800000;}
+     0% { background-color:   #006400;}
+     10% { background-color:  #008000;}
+     20% { background-color: #228B22; }
+    30% { background-color: #32CD32;}
+      40%{ background-color:  #3CB371;}
+     50% { background-color: #2E8B57;}
+    60%{background-color:  #325920; }
+   70%{ background-color:  #307160;}
+     80%{ background-color: #2B9147; }
+      90%{ background-color:  #1F8E60;}
+   100% { background-color:  #006400; }
  }
 
  section {
@@ -139,7 +139,7 @@ body {
 #profiles h2{
   text-align: center;
   font-size: 2.5em;
-     margin-bottom: 1em;
+    margin-bottom: 1em;
 }
 
 .profile-grid {

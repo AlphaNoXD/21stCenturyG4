@@ -1,0 +1,184 @@
+ body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      overflow-x: hidden;
+  }
+
+  main {
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* center content*/
+      justify-content: center; /* center content */
+      min-height: 100vh;
+       background-size: 400% 400%;
+     background-image: linear-gradient(
+     45deg,
+      #FF8C00,
+       #FFA500,
+       #FF7F50,
+        #FF6347,
+       #F4A460,
+        #E9967A,
+        #CD853F,
+        #D2691E,
+        #B8860B,
+        #DAA520
+      );
+      animation: gradient-move 15s linear infinite, gradient-color 10s ease infinite;
+      backdrop-filter: blur(5px); /* Apply the blur effect */
+      color: white;
+      position: relative;
+      padding: 20px;
+
+  }
+
+  @keyframes gradient-move {
+    0%{
+      background-position: 0% 50%;
+    }
+     50%{
+      background-position: 100% 50%;
+    }
+     100%{
+      background-position: 0% 50%;
+    }
+  }
+  @keyframes gradient-color {
+       0% { background-color: #FF8C00; }
+    10% { background-color:#FFA500; }
+      20% { background-color: #FF7F50; }
+  30% { background-color:  #FF6347; }
+    40%{ background-color: #F4A460;}
+   50% { background-color: #E9967A;}
+     60%{background-color:#CD853F; }
+  70%{ background-color:  #D2691E;}
+      80%{ background-color: #B8860B; }
+   90%{ background-color: #DAA520;}
+    100% { background-color: #FF8C00; }
+  }
+
+  section {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px; /* Round the corners */
+      border-top-right-radius: 50px;
+      border-bottom-left-radius: 50px;
+      padding: 2em;
+      margin: 2em 0;
+      text-align: center;
+       position: relative; /* For pseudo-element positioning */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* subtle box-shadow */
+    overflow:hidden;
+     opacity: 0;
+     transform: translateY(20px); /* Initial state for fade in */
+      transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+   section.fade-in-up {
+       opacity: 1; /* Fade in */
+      transform: translateY(0);
+   }
+  section::before {
+   content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+      background:  linear-gradient(to bottom, transparent 0%, rgba(255,255,255,0.08) 10%, transparent 90%);
+      pointer-events:none;
+ mix-blend-mode: difference;
+  }
+
+  section h2{
+     font-family: 'Arial Black', sans-serif;  /* Cool Looking font */
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 2em;
+      color: #fff;
+      margin-bottom: 1em;
+      position: relative; /* Ensure h2 is positioned above the gradient */
+  }
+
+  .haiku-text,
+  .tanaga-text,
+  .six-word-text {
+    font-family: 'Georgia', serif;  /* Cool Looking font */
+      font-size: 1.1em;
+      line-height: 1.6;
+      margin-bottom: 1.5em;
+      color: #eee;
+      position: relative; /* Ensure text is positioned above the gradient */
+  }
+
+ .back-button{
+    position: fixed;
+    top: 20px;
+   left: 20px;
+    color: #fff;
+     text-decoration: none;
+      font-size: 1.2em;
+     padding: 10px 15px;
+       border-radius: 5px;
+      background: rgba(255, 255, 255, 0.1);
+     transition: background-color 0.3s ease;
+      z-index: 100; /* always on top*/
+ }
+
+.back-button:hover{
+       background-color: rgba(255, 255, 255, 0.2);
+ }
+
+ /*Profile Styles*/
+
+ #profiles {
+   text-align: center;
+    margin-bottom: 1em;
+ }
+
+ #profiles h2{
+   text-align: center;
+   font-size: 2.5em;
+     margin-bottom: 1em;
+ }
+
+ .profile-grid {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+     gap: 20px;
+    justify-items: center;
+ }
+
+  .profile-card {
+   text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+     padding: 1em;
+     border-radius: 10px;
+     overflow: hidden;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     margin: 1em 0;
+  }
+
+  .profile-image {
+       width: 150px;
+       height: 150px;
+       border-radius: 50%;
+       overflow: hidden;
+       margin-bottom: 10px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+  }
+
+   .profile-image img {
+     width: 100%;
+     height: auto;
+     object-fit: cover;
+  }
+
+   .profile-name {
+     margin-top: 10px;
+       font-size: 1.2em;
+   }

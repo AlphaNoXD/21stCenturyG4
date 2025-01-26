@@ -85,6 +85,7 @@ section h2{
     justify-content: space-around;
     margin-bottom: 4em;
     animation: fadeIn 1s ease-in;
+	background-image: url('https://images.squarespace-cdn.com/content/v1/5c28dc69f93fd4ce490885c0/1574634409826-VKQ6UFU253WR0UB3VWBF/image-asset.jpeg');
 }
 
 .figcaption-leiam {
